@@ -13,6 +13,20 @@
 
 ## Setup
 
+I ran into a few problems while trying to complete the Hello World tutorial on the F' community page on MacOS. The following steps worked for me.
+
+### Create your virtual environment
+
+```
+python3 -m venv fprime-venv
+. fprime-venv/bin/activate
+```
+
+The first line creates a virtual environment repository and the second activates the virtual environment. To confirm the virtual environment is active, ```(fprime-venv)``` should precede every new line in the command line. If the virtual environment is inactive, simply run ```. fprime-venv/bin/activate``` again. To terminate the virtual envionemnt, enter command ```deactivate``` in the command line.
+
+
+## Setup
+
 The setup here is quite similar to that on the official F' community Hello World page. I've added any notes I have about the process for clarity.
 
 ### Install fprime-bootstrap
