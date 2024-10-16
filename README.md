@@ -13,22 +13,18 @@
 
 ## Setup
 
-I ran into a few problems while trying to complete the Hello World tutorial on the F' community page on MacOS. The following steps worked for me.
-
-### Create your virtual environment
-
-```
-python3 -m venv fprime-venv
-. fprime-venv/bin/activate
-```
-
-The first line creates a virtual environment repository and the second activates the virtual environment. To validate the virtual environment is active, ```(fprime-venv)``` should precede every new line in the command line. If the virtual environment is inactive, simply run ```. fprime-venv/bin/activate``` again. To terminate the virtual envionemnt, enter command ```deactivate``` in the command line.
+I ran into a few problems while trying to complete the Hello World tutorial on the F' community page on MacOS. This mostly had to do with my fprime-bootstrap installation directory not being in my path.
 
 
 ### Install fprime-bootstrap
 
 ```pip3 install fprime-bootstrap```
 
+If your installation location is not already in PATH, pip should throw a warning saying so. It will also give you the installation path.
+
+To add the installation location to PATH, open .zprofile and add a new line:
+
+```export PATH="<install_path>:$PATH"```
 
 ### Create new fprime project
 
@@ -37,3 +33,26 @@ Instantiate your project using command
 ```fprime-bootstrap project```
 
 A prompt should appear asking for a project name, which should be filled out accordingly.
+
+
+### Activate the virtual environment
+
+cd into the project directory.
+
+```cd MyProject```
+
+Then, start the virtual environment:
+
+```. fprime-venv/bin/activate```
+
+To deactivate the virtual envrionment, simply use command ```deactivate``` in the command line while the virtual environemnt is running.
+
+
+### Build and generate project
+
+Run the following commands:
+
+```
+fprime-util generate
+fprime-util build
+```
