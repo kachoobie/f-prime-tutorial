@@ -14,3 +14,26 @@
 ## Setup
 
 The setup here is quite similar to that on the official F' community Hello World page. I've added any notes I have about the process for clarity.
+
+### Install fprime-bootstrap
+
+```pip3 install fprime-bootstrap```
+
+### Create a new fprime project
+
+Try instantiating your project with command
+
+```fprime-bootstrap project```
+
+If this works for you, congratulations! Unfortunately for me, I couldn't for the life of me get this command to work. A workaround to this is to simply start your virtual environment immedately:
+
+```python3 -m venv fprime-venv```
+```. fprime-venv/bin/activate```
+
+When the virtual environments in running, then run command
+
+```fprime-bootstrap project```
+
+You will be prompted to name your project, so do this.  
+
+The command to create a F' project didn't work for me initially. I first had to add it as an environmental path.
